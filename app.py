@@ -122,7 +122,7 @@ st.markdown(f"""
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown("<div class='main-header'>Movie Recommender System</div>", unsafe_allow_html=True)
+st.markdown("<div class='main-header'><b>Movie Recommender System</b></div>", unsafe_allow_html=True)
 st.markdown("<div class='subtitle'>Discover movies by genre. Enjoy posters and a modern look!</div>", unsafe_allow_html=True)
 st.markdown("<div class='accent-bar'></div>", unsafe_allow_html=True)
 
@@ -156,8 +156,8 @@ for row_idx in range(rows):
                 movie_genres = [g.strip() for g in row['genres'].split('|')]
                 icons = ' '.join([GENRE_ICONS.get(g, '') for g in movie_genres if g in GENRE_ICONS])
                 st.markdown(f"<div class='genre-icons'>{icons}</div>", unsafe_allow_html=True)
-                st.markdown(f"<div class='movie-title'>{row['title']}</div>", unsafe_allow_html=True)
-                st.markdown(f"<div class='movie-year'>{row['year']}</div>", unsafe_allow_html=True)
+                st.markdown(f"<div class='movie-title'><b>{row['title']}</b></div>", unsafe_allow_html=True)
+                st.markdown(f"<div class='movie-year'><b>{row['year']}</b></div>", unsafe_allow_html=True)
                 st.markdown("</div>", unsafe_allow_html=True)
 
 st.markdown(f"<div class='footer'>Made with ❤️ using Streamlit | Movie data: OMDb API & sample dataset</div>", unsafe_allow_html=True)
